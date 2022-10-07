@@ -99,9 +99,9 @@ public class Login extends JFrame implements ActionListener {
                 System.out.println("Error " + ex);
             }
         } else if (e.getSource() == button2) {
-            panel.setVisible(false);
+            frame.setVisible(false);
         } else if (e.getSource() == button3) {
-            panel.setVisible(false);
+            frame.setVisible(false);
             new Signup().panel.setVisible(true);
         }
     }

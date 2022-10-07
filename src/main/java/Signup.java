@@ -84,6 +84,8 @@ public class Signup implements ActionListener {
         button2.setBounds(140, 160, 100, 20);
         panel.add(button2);
 
+        button1.addActionListener(this);
+        button2.addActionListener(this);
 
         frame = new JFrame();
         frame.add(panel);
@@ -121,15 +123,15 @@ public class Signup implements ActionListener {
 
                 mySqlConnection.statement.executeUpdate(str);
                 JOptionPane.showMessageDialog(null, "Account Created Successfully");
-                panel.setVisible(false);
-                new Login().panel.setVisible(true);
+                frame.setVisible(false);
+                new Login();
 
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
         } else if (e.getSource() == button2) {
-            panel.setVisible(false);
-            new Login().panel.setVisible(true);
+            frame.setVisible(false);
+            new Login();
         }
     }
 }
